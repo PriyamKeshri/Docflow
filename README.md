@@ -11,34 +11,13 @@ document.
 
 ```mermaid
 flowchart LR
-    subgraph sources [Sources]
-        email[Email inbox]
-        hook[Webhook]
-        folder[Watched folder]
-        cron[Nightly cron]
-    end
-    subgraph orchestration [n8n]
-        intake[Intake workflow]
-        notify[Notify workflow]
-    end
-    subgraph service [DocFlow API]
-        ingest["Ingest<br/>pdfplumber · Tesseract"]
-        extract["Extract<br/>LLM + Pydantic schema"]
-        validate["Validate<br/>rules · confidence"]
-    end
-    db[(PostgreSQL)]
-    sheets[Google Sheets]
-    alerts[Slack / email]
-
-    email --> intake
-    hook --> intake
-    intake --> ingest
-    folder --> ingest
-    cron --> ingest
-    ingest --> extract --> validate
-    validate --> db
-    validate --> sheets
-    validate --> notify --> alerts
+    inbox["Email · webhook<br/>(n8n)"] --> ingest
+    folder["Watched folder<br/>nightly batch"] --> ingest
+    ingest["Ingest<br/>pdfplumber · Tesseract"] --> extract["Extract<br/>LLM + Pydantic"]
+    extract --> validate["Validate<br/>rules · confidence"]
+    validate --> db[(PostgreSQL)]
+    validate --> sheets[Google Sheets]
+    validate --> alerts["Slack · email<br/>(n8n)"]
 ```
 
 ## How it works
