@@ -1,0 +1,92 @@
+{
+  "file": "docs/bank-02.pdf",
+  "document_type": "bank_statement",
+  "fields": {
+    "bank_name": "Albion Building Society",
+    "account_holder": "Felix Whitaker",
+    "account_number_last4": "7045",
+    "statement_period_start": "2025-12-01",
+    "statement_period_end": "2025-12-31",
+    "currency": "GBP",
+    "opening_balance": 14657.79,
+    "closing_balance": 18729.51,
+    "total_credits": 6229.52,
+    "total_debits": 2157.8,
+    "transactions": [
+      {
+        "date": "2025-12-01",
+        "description": "Insurance premium - Shield Mutual",
+        "amount": -178.08,
+        "balance": 14479.71
+      },
+      {
+        "date": "2025-12-02",
+        "description": "Card purchase - Green Basket Grocers",
+        "amount": -30.9,
+        "balance": 14448.81
+      },
+      {
+        "date": "2025-12-03",
+        "description": "Electricity bill - City Power",
+        "amount": -98.93,
+        "balance": 14349.88
+      },
+      {
+        "date": "2025-12-06",
+        "description": "Transfer from savings",
+        "amount": 589.54,
+        "balance": 14939.42
+      },
+      {
+        "date": "2025-12-07",
+        "description": "Rent - Elm Court Property Mgmt",
+        "amount": -1602.7,
+        "balance": 13336.72
+      },
+      {
+        "date": "2025-12-10",
+        "description": "Electricity bill - City Power",
+        "amount": -133.77,
+        "balance": 13202.95
+      },
+      {
+        "date": "2025-12-11",
+        "description": "Gym membership",
+        "amount": -42.53,
+        "balance": 13160.42
+      },
+      {
+        "date": "2025-12-12",
+        "description": "Card purchase - Corner Cafe",
+        "amount": -4.64,
+        "balance": 13155.78
+      },
+      {
+        "date": "2025-12-13",
+        "description": "Electricity bill - City Power",
+        "amount": -50.91,
+        "balance": 13104.87
+      },
+      {
+        "date": "2025-12-29",
+        "description": "Salary - Tidewater Engineering",
+        "amount": 5639.98,
+        "balance": 18744.85
+      },
+      {
+        "date": "2025-12-31",
+        "description": "Streaming subscription",
+        "amount": -15.34,
+        "balance": 18729.51
+      }
+    ]
+  },
+  "meta": {
+    "source": "synthetic",
+    "verified": true,
+    "scanned": false,
+    "seed": 7,
+    "locale": "UK",
+    "layout": "a"
+  }
+}

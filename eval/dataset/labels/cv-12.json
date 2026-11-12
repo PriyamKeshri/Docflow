@@ -1,0 +1,55 @@
+{
+  "file": "docs/cv-12.pdf",
+  "document_type": "resume",
+  "fields": {
+    "full_name": "Sofia Ashworth",
+    "email": "sofia.ashworth@example.com",
+    "phone": "+44 7700 900836",
+    "location": "Leeds, UK",
+    "skills": [
+      "Python",
+      "Snowflake",
+      "Looker",
+      "SQL",
+      "Spark",
+      "dbt"
+    ],
+    "experience": [
+      {
+        "company": "Tidewater Engineering",
+        "title": "Data Analyst",
+        "location": "Leeds, UK",
+        "start_date": "2023-06",
+        "end_date": "2026-08"
+      },
+      {
+        "company": "Quarry Hill Media",
+        "title": "Data Engineer",
+        "location": "Leeds, UK",
+        "start_date": "2020-01",
+        "end_date": "2023-02"
+      }
+    ],
+    "education": [
+      {
+        "institution": "Lakeside State University",
+        "degree": "B.Tech",
+        "field_of_study": "Computer Science",
+        "graduation_date": "2019"
+      },
+      {
+        "institution": "Lakeside State University",
+        "degree": "M.Sc.",
+        "field_of_study": "Data Science",
+        "graduation_date": "2017"
+      }
+    ]
+  },
+  "meta": {
+    "source": "synthetic",
+    "verified": true,
+    "scanned": true,
+    "seed": 7,
+    "layout": "b"
+  }
+}

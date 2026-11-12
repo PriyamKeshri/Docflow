@@ -1,0 +1,53 @@
+{
+  "file": "docs/cv-11.pdf",
+  "document_type": "resume",
+  "fields": {
+    "full_name": "Omar Morales",
+    "email": "omar.morales@example.com",
+    "phone": "(555) 0150-8056",
+    "location": "Austin, TX",
+    "skills": [
+      "TypeScript",
+      "System design",
+      "Redis",
+      "Kubernetes",
+      "React",
+      "Docker",
+      "Go",
+      "CI/CD",
+      "gRPC",
+      "AWS"
+    ],
+    "experience": [
+      {
+        "company": "Silverline Freight",
+        "title": "Software Engineer",
+        "location": "Austin, TX",
+        "start_date": "2024-01",
+        "end_date": "present"
+      },
+      {
+        "company": "Fernbrook Labs",
+        "title": "Backend Engineer",
+        "location": "Austin, TX",
+        "start_date": "2022-06",
+        "end_date": "2023-10"
+      }
+    ],
+    "education": [
+      {
+        "institution": "Easton College of Commerce",
+        "degree": "B.Eng.",
+        "field_of_study": "Software Engineering",
+        "graduation_date": "2021"
+      }
+    ]
+  },
+  "meta": {
+    "source": "synthetic",
+    "verified": true,
+    "scanned": false,
+    "seed": 7,
+    "layout": "a"
+  }
+}

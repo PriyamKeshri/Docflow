@@ -1,0 +1,58 @@
+{
+  "file": "docs/cv-09.jpg",
+  "document_type": "resume",
+  "fields": {
+    "full_name": "Ethan Calloway",
+    "email": "ethan.calloway@example.com",
+    "phone": "(555) 0109-1751",
+    "location": "Austin, TX",
+    "skills": [
+      "Budgeting",
+      "GAAP",
+      "Excel",
+      "Variance analysis",
+      "NetSuite",
+      "Month-end close",
+      "Accounts payable",
+      "SAP"
+    ],
+    "experience": [
+      {
+        "company": "Silverline Freight",
+        "title": "Financial Analyst",
+        "location": "Austin, TX",
+        "start_date": "2023-02",
+        "end_date": "present"
+      },
+      {
+        "company": "Granite Peak Software",
+        "title": "Accounts Payable Specialist",
+        "location": "Austin, TX",
+        "start_date": "2021-04",
+        "end_date": "2022-10"
+      },
+      {
+        "company": "Granite Peak Software",
+        "title": "Senior Accountant",
+        "location": "Austin, TX",
+        "start_date": "2018-01",
+        "end_date": "2021-03"
+      }
+    ],
+    "education": [
+      {
+        "institution": "Easton College of Commerce",
+        "degree": "BBA",
+        "field_of_study": "Finance",
+        "graduation_date": "2017"
+      }
+    ]
+  },
+  "meta": {
+    "source": "synthetic",
+    "verified": true,
+    "scanned": true,
+    "seed": 7,
+    "layout": "a"
+  }
+}

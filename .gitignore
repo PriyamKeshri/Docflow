@@ -1,0 +1,26 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+
+.env
+*.db
+*.sqlite3
+
+# Runtime data (inbox, stored originals, processed/failed folders)
+data/*
+!data/.gitkeep
+
+# Google service-account keys
+*service-account*.json
+secrets/
+
+eval/results/runs/
+.DS_Store

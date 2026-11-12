@@ -1,0 +1,37 @@
+# Production overlay for a Linux VM: HTTPS via Caddy, no ports exposed except 80/443.
+#   docker compose -f docker-compose.yml -f deploy/docker-compose.prod.yml up -d --build
+# Needs DOCFLOW_DOMAIN and N8N_DOMAIN in .env, with DNS A records pointing at the VM.
+services:
+  api:
+    ports: !reset []
+    environment:
+      DOCFLOW_PUBLIC_BASE_URL: https://${DOCFLOW_DOMAIN}
+
+  n8n:
+    ports: !reset []
+    environment:
+      N8N_HOST: ${N8N_DOMAIN}
+      N8N_PROTOCOL: https
+      WEBHOOK_URL: https://${N8N_DOMAIN}/
+      N8N_SECURE_COOKIE: "true"
+
+  caddy:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    environment:
+      DOCFLOW_DOMAIN: ${DOCFLOW_DOMAIN:?set DOCFLOW_DOMAIN in .env}
+      N8N_DOMAIN: ${N8N_DOMAIN:?set N8N_DOMAIN in .env}
+    volumes:
+      - ./deploy/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_data:/data
+      - caddy_config:/config
+    depends_on:
+      - api
+      - n8n
+
+volumes:
+  caddy_data:
+  caddy_config:

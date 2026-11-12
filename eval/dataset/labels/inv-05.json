@@ -1,0 +1,49 @@
+{
+  "file": "docs/inv-05.pdf",
+  "document_type": "invoice",
+  "fields": {
+    "invoice_number": "INV-2025-8359",
+    "vendor_name": "Copperleaf IT Services LLC",
+    "vendor_address": "77 Calder Avenue, Austin, TX 78701",
+    "vendor_tax_id": "82-1094437",
+    "customer_name": "Tallgrass Ventures LLC",
+    "customer_address": "31 Prairie Road, Omaha, NE 68102",
+    "invoice_date": "2025-07-12",
+    "due_date": "2025-07-27",
+    "currency": "USD",
+    "subtotal": 7679.22,
+    "discount": 383.96,
+    "tax": 455.95,
+    "shipping": null,
+    "total": 7751.21,
+    "payment_terms": "Net 15",
+    "line_items": [
+      {
+        "description": "Warehouse storage, per week",
+        "quantity": 10.0,
+        "unit_price": 197.96,
+        "amount": 1979.6
+      },
+      {
+        "description": "Training workshop, half day",
+        "quantity": 3.0,
+        "unit_price": 1782.41,
+        "amount": 5347.23
+      },
+      {
+        "description": "Brochure printing, 500 copies",
+        "quantity": 1.0,
+        "unit_price": 352.39,
+        "amount": 352.39
+      }
+    ]
+  },
+  "meta": {
+    "source": "synthetic",
+    "verified": true,
+    "scanned": false,
+    "seed": 7,
+    "locale": "US",
+    "layout": "a"
+  }
+}

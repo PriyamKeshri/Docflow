@@ -1,0 +1,57 @@
+{
+  "file": "docs/cv-04.pdf",
+  "document_type": "resume",
+  "fields": {
+    "full_name": "Elena Haddad",
+    "email": "elena.haddad@example.com",
+    "phone": "(555) 0143-7362",
+    "location": "Austin, TX",
+    "skills": [
+      "scikit-learn",
+      "SQL",
+      "PostgreSQL",
+      "Spark",
+      "Pandas",
+      "dbt",
+      "Looker"
+    ],
+    "experience": [
+      {
+        "company": "Tidewater Engineering",
+        "title": "Senior Data Analyst",
+        "location": "Austin, TX",
+        "start_date": "2025",
+        "end_date": "present"
+      },
+      {
+        "company": "Silverline Freight",
+        "title": "Data Engineer",
+        "location": "Austin, TX",
+        "start_date": "2022",
+        "end_date": "2024"
+      },
+      {
+        "company": "Larkspur Health",
+        "title": "Lead Data Scientist",
+        "location": "Austin, TX",
+        "start_date": "2019",
+        "end_date": "2022"
+      }
+    ],
+    "education": [
+      {
+        "institution": "Ridgemont Institute of Technology",
+        "degree": "B.Tech",
+        "field_of_study": "Computer Science",
+        "graduation_date": "2018"
+      }
+    ]
+  },
+  "meta": {
+    "source": "synthetic",
+    "verified": true,
+    "scanned": false,
+    "seed": 7,
+    "layout": "b"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "file": "docs/bank-06.pdf",
+  "document_type": "bank_statement",
+  "fields": {
+    "bank_name": "Albion Building Society",
+    "account_holder": "Mateo Okafor",
+    "account_number_last4": "1253",
+    "statement_period_start": "2025-09-01",
+    "statement_period_end": "2025-09-30",
+    "currency": "GBP",
+    "opening_balance": 10655.85,
+    "closing_balance": 14922.73,
+    "total_credits": 4472.8,
+    "total_debits": 205.92,
+    "transactions": [
+      {
+        "date": "2025-09-10",
+        "description": "Transfer from savings",
+        "amount": 301.71,
+        "balance": 10957.56
+      },
+      {
+        "date": "2025-09-11",
+        "description": "Interest paid",
+        "amount": 11.49,
+        "balance": 10969.05
+      },
+      {
+        "date": "2025-09-12",
+        "description": "Transfer from savings",
+        "amount": 694.17,
+        "balance": 11663.22
+      },
+      {
+        "date": "2025-09-13",
+        "description": "Card purchase - Petrol station",
+        "amount": -79.32,
+        "balance": 11583.9
+      },
+      {
+        "date": "2025-09-15",
+        "description": "Card purchase - Green Basket Grocers",
+        "amount": -118.15,
+        "balance": 11465.75
+      },
+      {
+        "date": "2025-09-22",
+        "description": "Salary - Larkspur Health",
+        "amount": 3465.43,
+        "balance": 14931.18
+      },
+      {
+        "date": "2025-09-24",
+        "description": "Card purchase - Corner Cafe",
+        "amount": -5.12,
+        "balance": 14926.06
+      },
+      {
+        "date": "2025-09-27",
+        "description": "Card purchase - Corner Cafe",
+        "amount": -3.33,
+        "balance": 14922.73
+      }
+    ]
+  },
+  "meta": {
+    "source": "synthetic",
+    "verified": true,
+    "scanned": true,
+    "seed": 7,
+    "locale": "UK",
+    "layout": "a"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "file": "docs/inv-07.pdf",
+  "document_type": "invoice",
+  "fields": {
+    "invoice_number": "RE-2026995",
+    "vendor_name": "Nordlicht Software GmbH",
+    "vendor_address": "Hafenstraße 12, 20457 Hamburg, Germany",
+    "vendor_tax_id": "DE298765432",
+    "customer_name": "Rheinblick Hotels GmbH",
+    "customer_address": "Uferweg 3, 50668 Köln, Germany",
+    "invoice_date": "2026-09-29",
+    "due_date": "2026-11-13",
+    "currency": "EUR",
+    "subtotal": 8990.24,
+    "discount": null,
+    "tax": 1708.15,
+    "shipping": null,
+    "total": 10698.39,
+    "payment_terms": "Net 45",
+    "line_items": [
+      {
+        "description": "Freight handling per pallet",
+        "quantity": 2.0,
+        "unit_price": 55.03,
+        "amount": 110.06
+      },
+      {
+        "description": "Ergonomic office chair",
+        "quantity": 12.0,
+        "unit_price": 207.68,
+        "amount": 2492.16
+      },
+      {
+        "description": "Cloud hosting, monthly",
+        "quantity": 3.0,
+        "unit_price": 596.48,
+        "amount": 1789.44
+      },
+      {
+        "description": "On-site IT support (hours)",
+        "quantity": 5.0,
+        "unit_price": 101.03,
+        "amount": 505.15
+      },
+      {
+        "description": "Website maintenance, monthly retainer",
+        "quantity": 1.0,
+        "unit_price": 494.47,
+        "amount": 494.47
+      },
+      {
+        "description": "Logo design and brand guide",
+        "quantity": 2.0,
+        "unit_price": 1799.48,
+        "amount": 3598.96
+      }
+    ]
+  },
+  "meta": {
+    "source": "synthetic",
+    "verified": true,
+    "scanned": false,
+    "seed": 7,
+    "locale": "DE",
+    "layout": "b"
+  }
+}

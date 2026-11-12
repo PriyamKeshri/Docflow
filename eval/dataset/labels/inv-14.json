@@ -1,0 +1,49 @@
+{
+  "file": "docs/inv-14.pdf",
+  "document_type": "invoice",
+  "fields": {
+    "invoice_number": "KP62928",
+    "vendor_name": "Kestrel Print & Design Ltd",
+    "vendor_address": "Unit 4, Mill Lane, Leeds LS2 7HJ, United Kingdom",
+    "vendor_tax_id": "GB 284 6153 07",
+    "customer_name": "Ashdown Lettings Ltd",
+    "customer_address": "2 Kings Parade, Cambridge CB2 1SJ, United Kingdom",
+    "invoice_date": "2025-08-22",
+    "due_date": "2025-08-22",
+    "currency": "GBP",
+    "subtotal": 3329.98,
+    "discount": null,
+    "tax": 666.0,
+    "shipping": null,
+    "total": 3995.98,
+    "payment_terms": "Due on receipt",
+    "line_items": [
+      {
+        "description": "Data pipeline consulting (days)",
+        "quantity": 1.0,
+        "unit_price": 919.4,
+        "amount": 919.4
+      },
+      {
+        "description": "Website maintenance, monthly retainer",
+        "quantity": 3.0,
+        "unit_price": 771.78,
+        "amount": 2315.34
+      },
+      {
+        "description": "Toner cartridge, black",
+        "quantity": 1.0,
+        "unit_price": 95.24,
+        "amount": 95.24
+      }
+    ]
+  },
+  "meta": {
+    "source": "synthetic",
+    "verified": true,
+    "scanned": false,
+    "seed": 7,
+    "locale": "UK",
+    "layout": "a"
+  }
+}

@@ -1,0 +1,62 @@
+name: Eval
+
+# Manual run of the accuracy / latency / cost evaluation. Costs real API money:
+# about 40 documents per run. Needs the ANTHROPIC_API_KEY or GEMINI_API_KEY secret.
+
+on:
+  workflow_dispatch:
+    inputs:
+      provider:
+        description: "claude or gemini"
+        required: true
+        default: claude
+        type: choice
+        options: [claude, gemini]
+      model:
+        description: "Model override (blank = the configured default)"
+        required: false
+        default: ""
+      effort:
+        description: "Claude effort (blank = default)"
+        required: false
+        default: ""
+
+permissions:
+  contents: read
+
+jobs:
+  eval:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      PROVIDER: ${{ inputs.provider }}
+      MODEL: ${{ inputs.model }}
+      EFFORT: ${{ inputs.effort }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: pyproject.toml
+
+      - name: Install Tesseract
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends tesseract-ocr
+
+      - name: Install DocFlow
+        run: pip install -e ".[dev]"
+
+      - name: Run eval
+        run: |
+          docflow eval --provider "$PROVIDER" \
+            ${MODEL:+--model "$MODEL"} ${EFFORT:+--effort "$EFFORT"} \
+            --out eval/results
+          cat eval/results/latest.md >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: eval-results
+          path: eval/results/

@@ -1,0 +1,60 @@
+{
+  "file": "docs/cv-05.pdf",
+  "document_type": "resume",
+  "fields": {
+    "full_name": "Mateo Ashworth",
+    "email": "mateo.ashworth@example.com",
+    "phone": "(555) 0196-9491",
+    "location": "Austin, TX",
+    "skills": [
+      "Go",
+      "Java",
+      "Docker",
+      "CI/CD",
+      "Terraform",
+      "Kubernetes",
+      "Redis",
+      "gRPC",
+      "TypeScript",
+      "React"
+    ],
+    "experience": [
+      {
+        "company": "Larkspur Health",
+        "title": "Staff Engineer",
+        "location": "Austin, TX",
+        "start_date": "2025-01",
+        "end_date": "2026-06"
+      },
+      {
+        "company": "Larkspur Health",
+        "title": "Software Engineer",
+        "location": "Austin, TX",
+        "start_date": "2021-11",
+        "end_date": "2024-11"
+      },
+      {
+        "company": "Quarry Hill Media",
+        "title": "Senior Software Engineer",
+        "location": "Austin, TX",
+        "start_date": "2019-07",
+        "end_date": "2021-08"
+      }
+    ],
+    "education": [
+      {
+        "institution": "Easton College of Commerce",
+        "degree": "M.S.",
+        "field_of_study": "Computer Science",
+        "graduation_date": "2018"
+      }
+    ]
+  },
+  "meta": {
+    "source": "synthetic",
+    "verified": true,
+    "scanned": false,
+    "seed": 7,
+    "layout": "a"
+  }
+}

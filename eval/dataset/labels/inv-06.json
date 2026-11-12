@@ -1,0 +1,56 @@
+{
+  "file": "docs/inv-06.pdf",
+  "document_type": "invoice",
+  "fields": {
+    "invoice_number": "KP29094",
+    "vendor_name": "Harrow Field Consulting Ltd",
+    "vendor_address": "19 Wexford Road, Bristol BS1 4QA, United Kingdom",
+    "vendor_tax_id": "GB 319 2264 51",
+    "customer_name": "Ashdown Lettings Ltd",
+    "customer_address": "2 Kings Parade, Cambridge CB2 1SJ, United Kingdom",
+    "invoice_date": "2025-10-13",
+    "due_date": "2025-11-27",
+    "currency": "GBP",
+    "subtotal": 11492.84,
+    "discount": null,
+    "tax": 2298.57,
+    "shipping": 73.97,
+    "total": 13965.38,
+    "payment_terms": "Net 45",
+    "line_items": [
+      {
+        "description": "Cloud hosting, monthly",
+        "quantity": 1.0,
+        "unit_price": 574.61,
+        "amount": 574.61
+      },
+      {
+        "description": "Ergonomic office chair",
+        "quantity": 20.0,
+        "unit_price": 289.59,
+        "amount": 5791.8
+      },
+      {
+        "description": "Data pipeline consulting (days)",
+        "quantity": 3.0,
+        "unit_price": 705.05,
+        "amount": 2115.15
+      },
+      {
+        "description": "Brochure printing, 500 copies",
+        "quantity": 12.0,
+        "unit_price": 250.94,
+        "amount": 3011.28
+      }
+    ]
+  },
+  "meta": {
+    "source": "synthetic",
+    "verified": true,
+    "scanned": true,
+    "seed": 7,
+    "locale": "UK",
+    "layout": "a",
+    "anomaly": "printed total is wrong"
+  }
+}

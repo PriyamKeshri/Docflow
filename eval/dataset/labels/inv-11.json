@@ -1,0 +1,67 @@
+{
+  "file": "docs/inv-11.pdf",
+  "document_type": "invoice",
+  "fields": {
+    "invoice_number": "RE-2025346",
+    "vendor_name": "Nordlicht Software GmbH",
+    "vendor_address": "Hafenstraße 12, 20457 Hamburg, Germany",
+    "vendor_tax_id": "DE298765432",
+    "customer_name": "Rheinblick Hotels GmbH",
+    "customer_address": "Uferweg 3, 50668 Köln, Germany",
+    "invoice_date": "2025-10-07",
+    "due_date": "2025-10-22",
+    "currency": "EUR",
+    "subtotal": 9348.42,
+    "discount": null,
+    "tax": 1776.2,
+    "shipping": 39.72,
+    "total": 11164.34,
+    "payment_terms": "Net 15",
+    "line_items": [
+      {
+        "description": "Cloud hosting, monthly",
+        "quantity": 2.0,
+        "unit_price": 554.11,
+        "amount": 1108.22
+      },
+      {
+        "description": "On-site IT support (hours)",
+        "quantity": 20.0,
+        "unit_price": 132.33,
+        "amount": 2646.6
+      },
+      {
+        "description": "Brochure printing, 500 copies",
+        "quantity": 20.0,
+        "unit_price": 255.71,
+        "amount": 5114.2
+      },
+      {
+        "description": "Catering: lunch buffet per guest",
+        "quantity": 3.0,
+        "unit_price": 16.35,
+        "amount": 49.05
+      },
+      {
+        "description": "Ergonomic office chair",
+        "quantity": 1.0,
+        "unit_price": 305.64,
+        "amount": 305.64
+      },
+      {
+        "description": "A4 copy paper, 80gsm (box of 5 reams)",
+        "quantity": 3.0,
+        "unit_price": 41.57,
+        "amount": 124.71
+      }
+    ]
+  },
+  "meta": {
+    "source": "synthetic",
+    "verified": true,
+    "scanned": false,
+    "seed": 7,
+    "locale": "DE",
+    "layout": "b"
+  }
+}

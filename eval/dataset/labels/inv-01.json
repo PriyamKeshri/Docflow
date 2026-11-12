@@ -1,0 +1,67 @@
+{
+  "file": "docs/inv-01.pdf",
+  "document_type": "invoice",
+  "fields": {
+    "invoice_number": "INV-2025-2186",
+    "vendor_name": "Copperleaf IT Services LLC",
+    "vendor_address": "77 Calder Avenue, Austin, TX 78701",
+    "vendor_tax_id": "82-1094437",
+    "customer_name": "Meridian Health Partners",
+    "customer_address": "900 Grant Street, Denver, CO 80203",
+    "invoice_date": "2025-12-20",
+    "due_date": "2026-01-19",
+    "currency": "USD",
+    "subtotal": 2928.77,
+    "discount": 146.44,
+    "tax": 229.54,
+    "shipping": null,
+    "total": 3011.87,
+    "payment_terms": "Net 30",
+    "line_items": [
+      {
+        "description": "Toner cartridge, black",
+        "quantity": 2.0,
+        "unit_price": 94.69,
+        "amount": 189.38
+      },
+      {
+        "description": "Software licence, annual seat",
+        "quantity": 3.0,
+        "unit_price": 330.5,
+        "amount": 991.5
+      },
+      {
+        "description": "Brochure printing, 500 copies",
+        "quantity": 2.0,
+        "unit_price": 190.64,
+        "amount": 381.28
+      },
+      {
+        "description": "Network switch, 24-port",
+        "quantity": 1.0,
+        "unit_price": 466.34,
+        "amount": 466.34
+      },
+      {
+        "description": "A4 copy paper, 80gsm (box of 5 reams)",
+        "quantity": 10.0,
+        "unit_price": 33.58,
+        "amount": 335.8
+      },
+      {
+        "description": "Training workshop, half day",
+        "quantity": 1.0,
+        "unit_price": 564.47,
+        "amount": 564.47
+      }
+    ]
+  },
+  "meta": {
+    "source": "synthetic",
+    "verified": true,
+    "scanned": false,
+    "seed": 7,
+    "locale": "US",
+    "layout": "a"
+  }
+}

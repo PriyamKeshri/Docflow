@@ -1,0 +1,38 @@
+# Render Blueprint: the API plus managed Postgres.
+# n8n is not part of this blueprint. Run it with docker compose on a VM or use
+# n8n Cloud, then set DOCFLOW_NOTIFY_WEBHOOK_URL to its docflow-notify webhook.
+# The nightly batch comes from .github/workflows/nightly.yml.
+services:
+  - type: web
+    name: docflow-api
+    runtime: docker
+    plan: starter # a persistent disk needs a paid plan
+    healthCheckPath: /health
+    autoDeploy: true
+    disk:
+      name: docflow-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: docflow-db
+          property: connectionString
+      - key: DOCFLOW_API_KEY
+        generateValue: true
+      - key: DOCFLOW_LLM_PROVIDER
+        value: claude
+      - key: ANTHROPIC_API_KEY
+        sync: false
+      - key: DOCFLOW_PUBLIC_BASE_URL
+        sync: false
+      - key: DOCFLOW_NOTIFY_WEBHOOK_URL
+        sync: false
+      - key: DOCFLOW_NOTIFY_SECRET
+        sync: false
+
+databases:
+  - name: docflow-db
+    plan: basic-256mb
+    databaseName: docflow
+    user: docflow

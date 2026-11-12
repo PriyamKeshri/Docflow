@@ -1,0 +1,70 @@
+{
+  "name": "DocFlow Nightly Batch",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 2 * * *"
+            }
+          ]
+        }
+      },
+      "id": "9e8d7c6b-5a4f-4e3d-8c2b-0f1c7d0c0001",
+      "name": "Every night at 02:00",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        0,
+        0
+      ],
+      "notes": "Use this OR the GitHub Actions nightly workflow, not both. This one suits a VM whose API is not reachable from the internet."
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.DOCFLOW_API_URL }}/v1/batch/run",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-API-Key",
+              "value": "={{ $env.DOCFLOW_API_KEY }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "9e8d7c6b-5a4f-4e3d-8c2b-0f1c7d0c0002",
+      "name": "Start DocFlow batch",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        300,
+        0
+      ]
+    }
+  ],
+  "connections": {
+    "Every night at 02:00": {
+      "main": [
+        [
+          {
+            "node": "Start DocFlow batch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true
+  },
+  "pinData": {},
+  "tags": []
+}

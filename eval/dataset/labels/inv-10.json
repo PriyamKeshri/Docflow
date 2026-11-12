@@ -1,0 +1,73 @@
+{
+  "file": "docs/inv-10.pdf",
+  "document_type": "invoice",
+  "fields": {
+    "invoice_number": "KP61883",
+    "vendor_name": "Harrow Field Consulting Ltd",
+    "vendor_address": "19 Wexford Road, Bristol BS1 4QA, United Kingdom",
+    "vendor_tax_id": "GB 319 2264 51",
+    "customer_name": "Ashdown Lettings Ltd",
+    "customer_address": "2 Kings Parade, Cambridge CB2 1SJ, United Kingdom",
+    "invoice_date": "2026-01-09",
+    "due_date": "2026-02-23",
+    "currency": "GBP",
+    "subtotal": 8075.49,
+    "discount": null,
+    "tax": 1615.1,
+    "shipping": null,
+    "total": 9690.59,
+    "payment_terms": "Net 45",
+    "line_items": [
+      {
+        "description": "Ergonomic office chair",
+        "quantity": 3.0,
+        "unit_price": 321.79,
+        "amount": 965.37
+      },
+      {
+        "description": "Data pipeline consulting (days)",
+        "quantity": 1.0,
+        "unit_price": 974.23,
+        "amount": 974.23
+      },
+      {
+        "description": "Training workshop, half day",
+        "quantity": 3.0,
+        "unit_price": 1295.05,
+        "amount": 3885.15
+      },
+      {
+        "description": "Warehouse storage, per week",
+        "quantity": 2.0,
+        "unit_price": 304.04,
+        "amount": 608.08
+      },
+      {
+        "description": "Freight handling per pallet",
+        "quantity": 20.0,
+        "unit_price": 43.58,
+        "amount": 871.6
+      },
+      {
+        "description": "A4 copy paper, 80gsm (box of 5 reams)",
+        "quantity": 1.0,
+        "unit_price": 21.54,
+        "amount": 21.54
+      },
+      {
+        "description": "Software licence, annual seat",
+        "quantity": 1.0,
+        "unit_price": 749.52,
+        "amount": 749.52
+      }
+    ]
+  },
+  "meta": {
+    "source": "synthetic",
+    "verified": true,
+    "scanned": false,
+    "seed": 7,
+    "locale": "UK",
+    "layout": "a"
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "file": "docs/bank-08.pdf",
+  "document_type": "bank_statement",
+  "fields": {
+    "bank_name": "Kaveri Cooperative Bank",
+    "account_holder": "Lucas Raman",
+    "account_number_last4": "7723",
+    "statement_period_start": "2025-09-01",
+    "statement_period_end": "2025-09-30",
+    "currency": "INR",
+    "opening_balance": 7710.51,
+    "closing_balance": 10659.31,
+    "total_credits": 5001.16,
+    "total_debits": 2052.36,
+    "transactions": [
+      {
+        "date": "2025-09-04",
+        "description": "ATM withdrawal",
+        "amount": -85.94,
+        "balance": 7624.57
+      },
+      {
+        "date": "2025-09-07",
+        "description": "Gym membership",
+        "amount": -33.47,
+        "balance": 7591.1
+      },
+      {
+        "date": "2025-09-09",
+        "description": "Interest paid",
+        "amount": 11.91,
+        "balance": 7603.01
+      },
+      {
+        "date": "2025-09-09",
+        "description": "ATM withdrawal",
+        "amount": -201.9,
+        "balance": 7401.11
+      },
+      {
+        "date": "2025-09-09",
+        "description": "Interest paid",
+        "amount": 11.9,
+        "balance": 7413.01
+      },
+      {
+        "date": "2025-09-09",
+        "description": "Interest paid",
+        "amount": 10.65,
+        "balance": 7423.66
+      },
+      {
+        "date": "2025-09-10",
+        "description": "Card purchase - Corner Cafe",
+        "amount": -13.06,
+        "balance": 7410.6
+      },
+      {
+        "date": "2025-09-10",
+        "description": "Interest paid",
+        "amount": 3.18,
+        "balance": 7413.78
+      },
+      {
+        "date": "2025-09-12",
+        "description": "Refund - Online order",
+        "amount": 136.62,
+        "balance": 7550.4
+      },
+      {
+        "date": "2025-09-15",
+        "description": "Rent - Elm Court Property Mgmt",
+        "amount": -1346.68,
+        "balance": 6203.72
+      },
+      {
+        "date": "2025-09-18",
+        "description": "Card purchase - Corner Cafe",
+        "amount": -9.63,
+        "balance": 6194.09
+      },
+      {
+        "date": "2025-09-19",
+        "description": "Card purchase - Green Basket Grocers",
+        "amount": -33.02,
+        "balance": 6161.07
+      },
+      {
+        "date": "2025-09-22",
+        "description": "Salary - Quarry Hill Media",
+        "amount": 4826.9,
+        "balance": 10987.97
+      },
+      {
+        "date": "2025-09-24",
+        "description": "ATM withdrawal",
+        "amount": -30.49,
+        "balance": 10957.48
+      },
+      {
+        "date": "2025-09-25",
+        "description": "Card purchase - Green Basket Grocers",
+        "amount": -46.96,
+        "balance": 10910.52
+      },
+      {
+        "date": "2025-09-25",
+        "description": "Gym membership",
+        "amount": -57.95,
+        "balance": 10852.57
+      },
+      {
+        "date": "2025-09-25",
+        "description": "Card purchase - Green Basket Grocers",
+        "amount": -134.27,
+        "balance": 10718.3
+      },
+      {
+        "date": "2025-09-27",
+        "description": "Mobile phone - Skyline Telecom",
+        "amount": -30.18,
+        "balance": 10688.12
+      },
+      {
+        "date": "2025-09-28",
+        "description": "ATM withdrawal",
+        "amount": -28.81,
+        "balance": 10659.31
+      }
+    ]
+  },
+  "meta": {
+    "source": "synthetic",
+    "verified": true,
+    "scanned": false,
+    "seed": 7,
+    "locale": "IN",
+    "layout": "b"
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "file": "docs/bank-10.pdf",
+  "document_type": "bank_statement",
+  "fields": {
+    "bank_name": "Albion Building Society",
+    "account_holder": "Aisha Morales",
+    "account_number_last4": "4180",
+    "statement_period_start": "2026-05-01",
+    "statement_period_end": "2026-05-31",
+    "currency": "GBP",
+    "opening_balance": 13228.61,
+    "closing_balance": 17065.01,
+    "total_credits": 6103.37,
+    "total_debits": 2266.97,
+    "transactions": [
+      {
+        "date": "2026-05-04",
+        "description": "Gym membership",
+        "amount": -31.58,
+        "balance": 13197.03
+      },
+      {
+        "date": "2026-05-09",
+        "description": "Rent - Elm Court Property Mgmt",
+        "amount": -1430.74,
+        "balance": 11766.29
+      },
+      {
+        "date": "2026-05-09",
+        "description": "Refund - Online order",
+        "amount": 134.75,
+        "balance": 11901.04
+      },
+      {
+        "date": "2026-05-12",
+        "description": "Insurance premium - Shield Mutual",
+        "amount": -105.66,
+        "balance": 11795.38
+      },
+      {
+        "date": "2026-05-13",
+        "description": "Gym membership",
+        "amount": -66.78,
+        "balance": 11728.6
+      },
+      {
+        "date": "2026-05-13",
+        "description": "Card purchase - Green Basket Grocers",
+        "amount": -124.09,
+        "balance": 11604.51
+      },
+      {
+        "date": "2026-05-17",
+        "description": "Card purchase - Petrol station",
+        "amount": -66.96,
+        "balance": 11537.55
+      },
+      {
+        "date": "2026-05-18",
+        "description": "Insurance premium - Shield Mutual",
+        "amount": -125.54,
+        "balance": 11412.01
+      },
+      {
+        "date": "2026-05-19",
+        "description": "Interest paid",
+        "amount": 3.11,
+        "balance": 11415.12
+      },
+      {
+        "date": "2026-05-21",
+        "description": "Salary - Larkspur Health",
+        "amount": 5020.57,
+        "balance": 16435.69
+      },
+      {
+        "date": "2026-05-23",
+        "description": "Transfer from savings",
+        "amount": 937.26,
+        "balance": 17372.95
+      },
+      {
+        "date": "2026-05-24",
+        "description": "Insurance premium - Shield Mutual",
+        "amount": -124.29,
+        "balance": 17248.66
+      },
+      {
+        "date": "2026-05-26",
+        "description": "Gym membership",
+        "amount": -38.55,
+        "balance": 17210.11
+      },
+      {
+        "date": "2026-05-28",
+        "description": "Interest paid",
+        "amount": 7.68,
+        "balance": 17217.79
+      },
+      {
+        "date": "2026-05-29",
+        "description": "Electricity bill - City Power",
+        "amount": -46.91,
+        "balance": 17170.88
+      },
+      {
+        "date": "2026-05-29",
+        "description": "Electricity bill - City Power",
+        "amount": -105.87,
+        "balance": 17065.01
+      }
+    ]
+  },
+  "meta": {
+    "source": "synthetic",
+    "verified": true,
+    "scanned": false,
+    "seed": 7,
+    "locale": "UK",
+    "layout": "a"
+  }
+}

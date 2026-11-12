@@ -1,0 +1,74 @@
+{
+  "file": "docs/bank-07.pdf",
+  "document_type": "bank_statement",
+  "fields": {
+    "bank_name": "Elbtal Sparkasse",
+    "account_holder": "Aisha Raman",
+    "account_number_last4": "0454",
+    "statement_period_start": "2025-11-01",
+    "statement_period_end": "2025-11-30",
+    "currency": "EUR",
+    "opening_balance": 2547.15,
+    "closing_balance": 8581.7,
+    "total_credits": 6172.68,
+    "total_debits": 138.13,
+    "transactions": [
+      {
+        "date": "2025-11-04",
+        "description": "Streaming subscription",
+        "amount": -16.15,
+        "balance": 2531.0
+      },
+      {
+        "date": "2025-11-08",
+        "description": "Interest paid",
+        "amount": 2.6,
+        "balance": 2533.6
+      },
+      {
+        "date": "2025-11-13",
+        "description": "Card purchase - Petrol station",
+        "amount": -79.37,
+        "balance": 2454.23
+      },
+      {
+        "date": "2025-11-15",
+        "description": "Gym membership",
+        "amount": -35.63,
+        "balance": 2418.6
+      },
+      {
+        "date": "2025-11-16",
+        "description": "Card purchase - Corner Cafe",
+        "amount": -6.98,
+        "balance": 2411.62
+      },
+      {
+        "date": "2025-11-23",
+        "description": "Salary - Fernbrook Labs",
+        "amount": 5459.65,
+        "balance": 7871.27
+      },
+      {
+        "date": "2025-11-25",
+        "description": "Transfer from savings",
+        "amount": 709.19,
+        "balance": 8580.46
+      },
+      {
+        "date": "2025-11-27",
+        "description": "Interest paid",
+        "amount": 1.24,
+        "balance": 8581.7
+      }
+    ]
+  },
+  "meta": {
+    "source": "synthetic",
+    "verified": true,
+    "scanned": false,
+    "seed": 7,
+    "locale": "DE",
+    "layout": "b"
+  }
+}

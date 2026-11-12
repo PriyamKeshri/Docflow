@@ -1,0 +1,64 @@
+{
+  "file": "docs/cv-10.pdf",
+  "document_type": "resume",
+  "fields": {
+    "full_name": "Aisha Iyer",
+    "email": "aisha.iyer@example.com",
+    "phone": "+44 7700 900230",
+    "location": "Leeds, UK",
+    "skills": [
+      "Excel",
+      "Power BI",
+      "NetSuite",
+      "Variance analysis",
+      "Month-end close",
+      "SAP",
+      "Budgeting"
+    ],
+    "experience": [
+      {
+        "company": "Quarry Hill Media",
+        "title": "Finance Manager",
+        "location": "Leeds, UK",
+        "start_date": "2025-01",
+        "end_date": "present"
+      },
+      {
+        "company": "Larkspur Health",
+        "title": "Senior Accountant",
+        "location": "Leeds, UK",
+        "start_date": "2023-09",
+        "end_date": "2024-12"
+      },
+      {
+        "company": "Juniper Bay Bank",
+        "title": "Accounts Payable Specialist",
+        "location": "Leeds, UK",
+        "start_date": "2020-01",
+        "end_date": "2023-05"
+      },
+      {
+        "company": "Fernbrook Labs",
+        "title": "Financial Analyst",
+        "location": "Leeds, UK",
+        "start_date": "2016-08",
+        "end_date": "2019-10"
+      }
+    ],
+    "education": [
+      {
+        "institution": "Lakeside State University",
+        "degree": "MBA",
+        "field_of_study": "Finance",
+        "graduation_date": "2015"
+      }
+    ]
+  },
+  "meta": {
+    "source": "synthetic",
+    "verified": true,
+    "scanned": false,
+    "seed": 7,
+    "layout": "b"
+  }
+}

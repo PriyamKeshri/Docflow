@@ -1,0 +1,65 @@
+{
+  "file": "docs/cv-01.pdf",
+  "document_type": "resume",
+  "fields": {
+    "full_name": "Priya Fischer",
+    "email": "priya.fischer@example.com",
+    "phone": "(555) 0121-4358",
+    "location": "Austin, TX",
+    "skills": [
+      "System design",
+      "Go",
+      "CI/CD",
+      "Kubernetes",
+      "TypeScript",
+      "AWS",
+      "React",
+      "Redis",
+      "Terraform"
+    ],
+    "experience": [
+      {
+        "company": "Orchard Lane Retail",
+        "title": "Software Engineer",
+        "location": "Austin, TX",
+        "start_date": "2023-01",
+        "end_date": "present"
+      },
+      {
+        "company": "Granite Peak Software",
+        "title": "Backend Engineer",
+        "location": "Austin, TX",
+        "start_date": "2019-12",
+        "end_date": "2022-12"
+      },
+      {
+        "company": "Juniper Bay Bank",
+        "title": "Senior Software Engineer",
+        "location": "Austin, TX",
+        "start_date": "2016-08",
+        "end_date": "2019-10"
+      }
+    ],
+    "education": [
+      {
+        "institution": "Lakeside State University",
+        "degree": "B.S.",
+        "field_of_study": "Computer Science",
+        "graduation_date": "2016"
+      },
+      {
+        "institution": "University of Westmarch",
+        "degree": "B.Eng.",
+        "field_of_study": "Software Engineering",
+        "graduation_date": "2014"
+      }
+    ]
+  },
+  "meta": {
+    "source": "synthetic",
+    "verified": true,
+    "scanned": false,
+    "seed": 7,
+    "layout": "a"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "file": "docs/inv-13.pdf",
+  "document_type": "invoice",
+  "fields": {
+    "invoice_number": "INV-2026-3246",
+    "vendor_name": "Bluewater Catering Inc.",
+    "vendor_address": "2150 Marina Blvd, San Diego, CA 92101",
+    "vendor_tax_id": null,
+    "customer_name": "Meridian Health Partners",
+    "customer_address": "900 Grant Street, Denver, CO 80203",
+    "invoice_date": "2026-08-05",
+    "due_date": "2026-08-05",
+    "currency": "USD",
+    "subtotal": 5344.49,
+    "discount": null,
+    "tax": 0.0,
+    "shipping": null,
+    "total": 5344.49,
+    "payment_terms": "Due on receipt",
+    "line_items": [
+      {
+        "description": "Cloud hosting, monthly",
+        "quantity": 5.0,
+        "unit_price": 127.29,
+        "amount": 636.45
+      },
+      {
+        "description": "Toner cartridge, black",
+        "quantity": 3.0,
+        "unit_price": 122.71,
+        "amount": 368.13
+      },
+      {
+        "description": "Training workshop, half day",
+        "quantity": 2.0,
+        "unit_price": 1721.36,
+        "amount": 3442.72
+      },
+      {
+        "description": "Network switch, 24-port",
+        "quantity": 3.0,
+        "unit_price": 257.17,
+        "amount": 771.51
+      },
+      {
+        "description": "Catering: lunch buffet per guest",
+        "quantity": 4.0,
+        "unit_price": 31.42,
+        "amount": 125.68
+      }
+    ]
+  },
+  "meta": {
+    "source": "synthetic",
+    "verified": true,
+    "scanned": false,
+    "seed": 7,
+    "locale": "US",
+    "layout": "a"
+  }
+}

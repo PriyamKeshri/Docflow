@@ -1,0 +1,49 @@
+{
+  "file": "docs/inv-02.pdf",
+  "document_type": "invoice",
+  "fields": {
+    "invoice_number": "KP86231",
+    "vendor_name": "Kestrel Print & Design Ltd",
+    "vendor_address": "Unit 4, Mill Lane, Leeds LS2 7HJ, United Kingdom",
+    "vendor_tax_id": "GB 284 6153 07",
+    "customer_name": "Pennine Outdoor Gear Ltd",
+    "customer_address": "58 Market Street, Manchester M1 1PW, United Kingdom",
+    "invoice_date": "2026-03-14",
+    "due_date": "2026-03-29",
+    "currency": "GBP",
+    "subtotal": 3134.52,
+    "discount": null,
+    "tax": 626.9,
+    "shipping": null,
+    "total": 3761.42,
+    "payment_terms": "Net 15",
+    "line_items": [
+      {
+        "description": "Data pipeline consulting (days)",
+        "quantity": 1.0,
+        "unit_price": 912.87,
+        "amount": 912.87
+      },
+      {
+        "description": "Toner cartridge, black",
+        "quantity": 12.0,
+        "unit_price": 109.52,
+        "amount": 1314.24
+      },
+      {
+        "description": "Brochure printing, 500 copies",
+        "quantity": 3.0,
+        "unit_price": 302.47,
+        "amount": 907.41
+      }
+    ]
+  },
+  "meta": {
+    "source": "synthetic",
+    "verified": true,
+    "scanned": false,
+    "seed": 7,
+    "locale": "UK",
+    "layout": "a"
+  }
+}

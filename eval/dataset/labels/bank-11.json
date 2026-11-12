@@ -1,0 +1,74 @@
+{
+  "file": "docs/bank-11.pdf",
+  "document_type": "bank_statement",
+  "fields": {
+    "bank_name": "Elbtal Sparkasse",
+    "account_holder": "Clara Novak",
+    "account_number_last4": "7987",
+    "statement_period_start": "2025-10-01",
+    "statement_period_end": "2025-10-31",
+    "currency": "EUR",
+    "opening_balance": 4563.74,
+    "closing_balance": 3513.54,
+    "total_credits": 10.3,
+    "total_debits": 1060.5,
+    "transactions": [
+      {
+        "date": "2025-10-01",
+        "description": "Rent - Elm Court Property Mgmt",
+        "amount": -914.82,
+        "balance": 3648.92
+      },
+      {
+        "date": "2025-10-02",
+        "description": "ATM withdrawal",
+        "amount": -59.83,
+        "balance": 3589.09
+      },
+      {
+        "date": "2025-10-02",
+        "description": "Gym membership",
+        "amount": -53.92,
+        "balance": 3535.17
+      },
+      {
+        "date": "2025-10-06",
+        "description": "Streaming subscription",
+        "amount": -16.13,
+        "balance": 3519.04
+      },
+      {
+        "date": "2025-10-06",
+        "description": "Interest paid",
+        "amount": 1.23,
+        "balance": 3520.27
+      },
+      {
+        "date": "2025-10-08",
+        "description": "Card purchase - Corner Cafe",
+        "amount": -10.87,
+        "balance": 3509.4
+      },
+      {
+        "date": "2025-10-13",
+        "description": "Interest paid",
+        "amount": 9.07,
+        "balance": 3518.47
+      },
+      {
+        "date": "2025-10-18",
+        "description": "Card purchase - Corner Cafe",
+        "amount": -4.93,
+        "balance": 3513.54
+      }
+    ]
+  },
+  "meta": {
+    "source": "synthetic",
+    "verified": true,
+    "scanned": false,
+    "seed": 7,
+    "locale": "DE",
+    "layout": "b"
+  }
+}

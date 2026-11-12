@@ -1,0 +1,64 @@
+{
+  "file": "docs/cv-07.pdf",
+  "document_type": "resume",
+  "fields": {
+    "full_name": "Arjun Whitaker",
+    "email": "arjun.whitaker@example.com",
+    "phone": "+44 7700 900428",
+    "location": "Leeds, UK",
+    "skills": [
+      "SAP",
+      "GAAP",
+      "Accounts payable",
+      "Power BI",
+      "Excel",
+      "Budgeting",
+      "Variance analysis"
+    ],
+    "experience": [
+      {
+        "company": "Orchard Lane Retail",
+        "title": "Accounts Payable Specialist",
+        "location": "Leeds, UK",
+        "start_date": "2023",
+        "end_date": "present"
+      },
+      {
+        "company": "Quarry Hill Media",
+        "title": "Senior Accountant",
+        "location": "Leeds, UK",
+        "start_date": "2021",
+        "end_date": "2022"
+      },
+      {
+        "company": "Granite Peak Software",
+        "title": "Financial Analyst",
+        "location": "Leeds, UK",
+        "start_date": "2019",
+        "end_date": "2021"
+      },
+      {
+        "company": "Tidewater Engineering",
+        "title": "Finance Manager",
+        "location": "Leeds, UK",
+        "start_date": "2015",
+        "end_date": "2018"
+      }
+    ],
+    "education": [
+      {
+        "institution": "Lakeside State University",
+        "degree": "MBA",
+        "field_of_study": "Finance",
+        "graduation_date": "2014"
+      }
+    ]
+  },
+  "meta": {
+    "source": "synthetic",
+    "verified": true,
+    "scanned": false,
+    "seed": 7,
+    "layout": "a"
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "name": "DocFlow Notify",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "docflow-notify",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "id": "7c1d2e3f-0a1b-4c5d-8e9f-0f1c7d0b0001",
+      "name": "DocFlow Events",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        100
+      ],
+      "webhookId": "1e7a5c2d-3c8b-4a6f-9d2b-5f4e3d2c1b02"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose"
+          },
+          "conditions": [
+            {
+              "id": "7c1d2e3f-0a1b-4c5d-8e9f-0f1c7d0b0002-c",
+              "leftValue": "={{ $json.headers['x-docflow-secret'] ?? '' }}",
+              "rightValue": "={{ $env.DOCFLOW_NOTIFY_SECRET ?? '' }}",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "7c1d2e3f-0a1b-4c5d-8e9f-0f1c7d0b0002",
+      "name": "Secret matches?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        260,
+        100
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.SLACK_WEBHOOK_URL }}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ text: $json.body.text }) }}",
+        "options": {}
+      },
+      "id": "7c1d2e3f-0a1b-4c5d-8e9f-0f1c7d0b0003",
+      "name": "Post to Slack",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        540,
+        0
+      ],
+      "onError": "continueRegularOutput",
+      "notes": "Uses a Slack incoming-webhook URL from the SLACK_WEBHOOK_URL env var."
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose"
+          },
+          "conditions": [
+            {
+              "id": "7c1d2e3f-0a1b-4c5d-8e9f-0f1c7d0b0004-c",
+              "leftValue": "={{ $json.body.has_failures }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "7c1d2e3f-0a1b-4c5d-8e9f-0f1c7d0b0004",
+      "name": "Any failures?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        540,
+        220
+      ]
+    },
+    {
+      "parameters": {
+        "fromEmail": "={{ $env.ALERT_EMAIL_FROM }}",
+        "toEmail": "={{ $env.ALERT_EMAIL_TO }}",
+        "subject": "={{ $json.body.subject }}",
+        "emailFormat": "text",
+        "text": "={{ $json.body.plain_text }}",
+        "options": {}
+      },
+      "id": "7c1d2e3f-0a1b-4c5d-8e9f-0f1c7d0b0005",
+      "name": "Email failures",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2.1,
+      "position": [
+        800,
+        200
+      ],
+      "notes": "Select your SMTP credential. Only events with failures are emailed."
+    }
+  ],
+  "connections": {
+    "DocFlow Events": {
+      "main": [
+        [
+          {
+            "node": "Secret matches?",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Secret matches?": {
+      "main": [
+        [
+          {
+            "node": "Post to Slack",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Any failures?",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        []
+      ]
+    },
+    "Any failures?": {
+      "main": [
+        [
+          {
+            "node": "Email failures",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        []
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true
+  },
+  "pinData": {},
+  "tags": []
+}

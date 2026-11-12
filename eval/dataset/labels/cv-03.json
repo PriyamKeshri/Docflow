@@ -1,0 +1,64 @@
+{
+  "file": "docs/cv-03.jpg",
+  "document_type": "resume",
+  "fields": {
+    "full_name": "Clara Whitaker",
+    "email": "clara.whitaker@example.com",
+    "phone": "(555) 0189-1555",
+    "location": "Seattle, WA",
+    "skills": [
+      "Terraform",
+      "CI/CD",
+      "Docker",
+      "React",
+      "Kubernetes",
+      "Java",
+      "TypeScript",
+      "gRPC"
+    ],
+    "experience": [
+      {
+        "company": "Orchard Lane Retail",
+        "title": "Senior Software Engineer",
+        "location": "Seattle, WA",
+        "start_date": "2024-02",
+        "end_date": "present"
+      },
+      {
+        "company": "Tidewater Engineering",
+        "title": "Software Engineer",
+        "location": "Seattle, WA",
+        "start_date": "2022-02",
+        "end_date": "2023-11"
+      },
+      {
+        "company": "Larkspur Health",
+        "title": "Backend Engineer",
+        "location": "Seattle, WA",
+        "start_date": "2019-08",
+        "end_date": "2021-12"
+      }
+    ],
+    "education": [
+      {
+        "institution": "Ridgemont Institute of Technology",
+        "degree": "B.Eng.",
+        "field_of_study": "Software Engineering",
+        "graduation_date": "2019"
+      },
+      {
+        "institution": "Ridgemont Institute of Technology",
+        "degree": "B.S.",
+        "field_of_study": "Computer Science",
+        "graduation_date": "2017"
+      }
+    ]
+  },
+  "meta": {
+    "source": "synthetic",
+    "verified": true,
+    "scanned": true,
+    "seed": 7,
+    "layout": "a"
+  }
+}

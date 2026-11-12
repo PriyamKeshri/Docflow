@@ -1,0 +1,73 @@
+{
+  "file": "docs/inv-09.jpg",
+  "document_type": "invoice",
+  "fields": {
+    "invoice_number": "INV-2026-4275",
+    "vendor_name": "Brightline Office Supply Co.",
+    "vendor_address": "418 Alder Street, Suite 200, Portland, OR 97205",
+    "vendor_tax_id": "47-3815562",
+    "customer_name": "Tallgrass Ventures LLC",
+    "customer_address": "31 Prairie Road, Omaha, NE 68102",
+    "invoice_date": "2026-06-14",
+    "due_date": "2026-06-29",
+    "currency": "USD",
+    "subtotal": 6125.52,
+    "discount": null,
+    "tax": 505.36,
+    "shipping": null,
+    "total": 6630.88,
+    "payment_terms": "Net 15",
+    "line_items": [
+      {
+        "description": "A4 copy paper, 80gsm (box of 5 reams)",
+        "quantity": 6.0,
+        "unit_price": 36.7,
+        "amount": 220.2
+      },
+      {
+        "description": "Training workshop, half day",
+        "quantity": 2.0,
+        "unit_price": 1081.4,
+        "amount": 2162.8
+      },
+      {
+        "description": "Freight handling per pallet",
+        "quantity": 6.0,
+        "unit_price": 87.53,
+        "amount": 525.18
+      },
+      {
+        "description": "On-site IT support (hours)",
+        "quantity": 2.0,
+        "unit_price": 71.04,
+        "amount": 142.08
+      },
+      {
+        "description": "Event staffing (hours)",
+        "quantity": 4.0,
+        "unit_price": 29.54,
+        "amount": 118.16
+      },
+      {
+        "description": "Warehouse storage, per week",
+        "quantity": 12.0,
+        "unit_price": 214.57,
+        "amount": 2574.84
+      },
+      {
+        "description": "Network switch, 24-port",
+        "quantity": 1.0,
+        "unit_price": 382.26,
+        "amount": 382.26
+      }
+    ]
+  },
+  "meta": {
+    "source": "synthetic",
+    "verified": true,
+    "scanned": true,
+    "seed": 7,
+    "locale": "US",
+    "layout": "a"
+  }
+}

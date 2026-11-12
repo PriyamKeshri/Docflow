@@ -1,0 +1,193 @@
+{
+  "name": "DocFlow Intake",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "docflow-intake",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "id": "5b0c3a52-6f7e-4c43-9d55-0f1c7d0a0001",
+      "name": "Intake Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "webhookId": "0d6f4b1e-2b7a-4f5e-8c1a-3e9d0c7a1b01"
+    },
+    {
+      "parameters": {
+        "mailbox": "INBOX",
+        "postProcessAction": "read",
+        "downloadAttachments": true,
+        "options": {
+          "customEmailConfig": "[\"UNSEEN\"]"
+        }
+      },
+      "id": "5b0c3a52-6f7e-4c43-9d55-0f1c7d0a0002",
+      "name": "Email Trigger (IMAP)",
+      "type": "n8n-nodes-base.emailReadImap",
+      "typeVersion": 2,
+      "position": [
+        0,
+        220
+      ],
+      "notes": "Select your IMAP credential. Only PDF, PNG, JPEG, TIFF and TXT attachments are forwarded."
+    },
+    {
+      "parameters": {
+        "jsCode": "// One item per attached file, binary moved to \"data\" for the HTTP node.\nconst ALLOWED = ['application/pdf', 'image/png', 'image/jpeg', 'image/tiff', 'text/plain'];\nconst out = [];\nfor (const item of $input.all()) {\n  for (const [key, file] of Object.entries(item.binary ?? {})) {\n    if (!ALLOWED.includes(file.mimeType)) continue;\n    out.push({\n      json: {\n        source: 'webhook',\n        filename: file.fileName ?? key,\n        from: item.json.from ?? null,\n        subject: item.json.subject ?? null,\n      },\n      binary: { data: file },\n    });\n  }\n}\nreturn out;\n"
+      },
+      "id": "5b0c3a52-6f7e-4c43-9d55-0f1c7d0a0003",
+      "name": "Webhook files",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        350,
+        0
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "// One item per attached file, binary moved to \"data\" for the HTTP node.\nconst ALLOWED = ['application/pdf', 'image/png', 'image/jpeg', 'image/tiff', 'text/plain'];\nconst out = [];\nfor (const item of $input.all()) {\n  for (const [key, file] of Object.entries(item.binary ?? {})) {\n    if (!ALLOWED.includes(file.mimeType)) continue;\n    out.push({\n      json: {\n        source: 'email',\n        filename: file.fileName ?? key,\n        from: item.json.from ?? null,\n        subject: item.json.subject ?? null,\n      },\n      binary: { data: file },\n    });\n  }\n}\nreturn out;\n"
+      },
+      "id": "5b0c3a52-6f7e-4c43-9d55-0f1c7d0a0005",
+      "name": "Email attachments",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        350,
+        220
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.DOCFLOW_API_URL }}/v1/documents",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-API-Key",
+              "value": "={{ $env.DOCFLOW_API_KEY }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "multipart-form-data",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "parameterType": "formBinaryData",
+              "name": "file",
+              "inputDataFieldName": "data"
+            },
+            {
+              "parameterType": "formData",
+              "name": "source",
+              "value": "={{ $json.source }}"
+            }
+          ]
+        },
+        "options": {
+          "timeout": 300000
+        }
+      },
+      "id": "5b0c3a52-6f7e-4c43-9d55-0f1c7d0a0004",
+      "name": "Send to DocFlow",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        700,
+        100
+      ],
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.SLACK_WEBHOOK_URL }}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ text: ':rotating_light: DocFlow intake could not hand a file to the API: ' + ($json.error?.message ?? JSON.stringify($json.error ?? $json)) }) }}",
+        "options": {}
+      },
+      "id": "5b0c3a52-6f7e-4c43-9d55-0f1c7d0a0006",
+      "name": "Alert: API unreachable",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1000,
+        220
+      ]
+    }
+  ],
+  "connections": {
+    "Intake Webhook": {
+      "main": [
+        [
+          {
+            "node": "Webhook files",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email Trigger (IMAP)": {
+      "main": [
+        [
+          {
+            "node": "Email attachments",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook files": {
+      "main": [
+        [
+          {
+            "node": "Send to DocFlow",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Email attachments": {
+      "main": [
+        [
+          {
+            "node": "Send to DocFlow",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send to DocFlow": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Alert: API unreachable",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "saveManualExecutions": true
+  },
+  "pinData": {},
+  "tags": []
+}

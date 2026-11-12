@@ -1,0 +1,50 @@
+{
+  "file": "docs/inv-12.pdf",
+  "document_type": "invoice",
+  "fields": {
+    "invoice_number": "SA/26-27/354",
+    "vendor_name": "Saffron Analytics Pvt. Ltd.",
+    "vendor_address": "4th Floor, Prestige Tower, MG Road, Bengaluru 560001, India",
+    "vendor_tax_id": "29ABCDE1234F1Z5",
+    "customer_name": "Indigo Edtech Pvt. Ltd.",
+    "customer_address": "Cyber Towers, HITEC City, Hyderabad 500081, India",
+    "invoice_date": "2026-05-16",
+    "due_date": "2026-05-16",
+    "currency": "INR",
+    "subtotal": 3625.02,
+    "discount": null,
+    "tax": 652.5,
+    "shipping": null,
+    "total": 4377.52,
+    "payment_terms": "Due on receipt",
+    "line_items": [
+      {
+        "description": "Brochure printing, 500 copies",
+        "quantity": 12.0,
+        "unit_price": 197.59,
+        "amount": 2371.08
+      },
+      {
+        "description": "A4 copy paper, 80gsm (box of 5 reams)",
+        "quantity": 2.0,
+        "unit_price": 33.17,
+        "amount": 66.34
+      },
+      {
+        "description": "Freight handling per pallet",
+        "quantity": 20.0,
+        "unit_price": 59.38,
+        "amount": 1187.6
+      }
+    ]
+  },
+  "meta": {
+    "source": "synthetic",
+    "verified": true,
+    "scanned": true,
+    "seed": 7,
+    "locale": "IN",
+    "layout": "b",
+    "anomaly": "printed total is wrong"
+  }
+}

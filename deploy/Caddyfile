@@ -1,0 +1,11 @@
+# Caddy gets and renews the TLS certificates automatically.
+{$DOCFLOW_DOMAIN} {
+	request_body {
+		max_size 25MB
+	}
+	reverse_proxy api:8000
+}
+
+{$N8N_DOMAIN} {
+	reverse_proxy n8n:5678
+}

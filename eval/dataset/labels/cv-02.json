@@ -1,0 +1,55 @@
+{
+  "file": "docs/cv-02.pdf",
+  "document_type": "resume",
+  "fields": {
+    "full_name": "Ravi Becker",
+    "email": "ravi.becker@example.com",
+    "phone": "(555) 0179-6688",
+    "location": "Seattle, WA",
+    "skills": [
+      "gRPC",
+      "Java",
+      "Go",
+      "Docker",
+      "Kubernetes",
+      "React"
+    ],
+    "experience": [
+      {
+        "company": "Quarry Hill Media",
+        "title": "Backend Engineer",
+        "location": "Seattle, WA",
+        "start_date": "2025-01",
+        "end_date": "present"
+      },
+      {
+        "company": "Quarry Hill Media",
+        "title": "Staff Engineer",
+        "location": "Seattle, WA",
+        "start_date": "2021-07",
+        "end_date": "2024-09"
+      }
+    ],
+    "education": [
+      {
+        "institution": "Easton College of Commerce",
+        "degree": "B.Eng.",
+        "field_of_study": "Software Engineering",
+        "graduation_date": "2021"
+      },
+      {
+        "institution": "Easton College of Commerce",
+        "degree": "B.S.",
+        "field_of_study": "Computer Science",
+        "graduation_date": "2019"
+      }
+    ]
+  },
+  "meta": {
+    "source": "synthetic",
+    "verified": true,
+    "scanned": false,
+    "seed": 7,
+    "layout": "b"
+  }
+}

@@ -1,0 +1,35 @@
+name: Nightly batch
+
+# Asks the deployed API to process its inbox, retry failed documents and finish
+# pending Sheets exports. The API then posts the batch summary to n8n -> Slack/email.
+# Needs repository secrets DOCFLOW_API_URL (e.g. https://docflow.example.com) and
+# DOCFLOW_API_KEY. If your API is not reachable from the internet, use the
+# "DocFlow Nightly Batch" n8n workflow instead.
+
+on:
+  schedule:
+    - cron: "0 2 * * *" # 02:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  batch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Trigger the batch
+        env:
+          DOCFLOW_API_URL: ${{ secrets.DOCFLOW_API_URL }}
+          DOCFLOW_API_KEY: ${{ secrets.DOCFLOW_API_KEY }}
+        run: |
+          if [ -z "$DOCFLOW_API_URL" ]; then
+            echo "::warning::Set the DOCFLOW_API_URL and DOCFLOW_API_KEY secrets to enable the nightly batch."
+            exit 0
+          fi
+          # --retry covers a cold start on hosts that sleep idle services.
+          curl --fail-with-body --silent --show-error \
+            --retry 5 --retry-all-errors --retry-delay 10 --max-time 60 \
+            -X POST "$DOCFLOW_API_URL/v1/batch/run" \
+            -H "X-API-Key: $DOCFLOW_API_KEY"

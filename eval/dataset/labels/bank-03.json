@@ -1,0 +1,116 @@
+{
+  "file": "docs/bank-03.jpg",
+  "document_type": "bank_statement",
+  "fields": {
+    "bank_name": "Elbtal Sparkasse",
+    "account_holder": "Zara Whitaker",
+    "account_number_last4": "6780",
+    "statement_period_start": "2026-05-01",
+    "statement_period_end": "2026-05-31",
+    "currency": "EUR",
+    "opening_balance": 2735.51,
+    "closing_balance": 1771.6,
+    "total_credits": 5234.62,
+    "total_debits": 6198.53,
+    "transactions": [
+      {
+        "date": "2026-05-01",
+        "description": "Card purchase - Petrol station",
+        "amount": -78.55,
+        "balance": 2656.96
+      },
+      {
+        "date": "2026-05-03",
+        "description": "ATM withdrawal",
+        "amount": -224.21,
+        "balance": 2432.75
+      },
+      {
+        "date": "2026-05-03",
+        "description": "Card purchase - Corner Cafe",
+        "amount": -8.43,
+        "balance": 2424.32
+      },
+      {
+        "date": "2026-05-03",
+        "description": "Card purchase - Corner Cafe",
+        "amount": -13.02,
+        "balance": 2411.3
+      },
+      {
+        "date": "2026-05-09",
+        "description": "Card purchase - Green Basket Grocers",
+        "amount": -105.61,
+        "balance": 2305.69
+      },
+      {
+        "date": "2026-05-15",
+        "description": "Rent - Elm Court Property Mgmt",
+        "amount": -1619.65,
+        "balance": 686.04
+      },
+      {
+        "date": "2026-05-17",
+        "description": "Card purchase - Petrol station",
+        "amount": -67.27,
+        "balance": 618.77
+      },
+      {
+        "date": "2026-05-17",
+        "description": "Interest paid",
+        "amount": 1.2,
+        "balance": 619.97
+      },
+      {
+        "date": "2026-05-18",
+        "description": "Rent - Elm Court Property Mgmt",
+        "amount": -1730.62,
+        "balance": -1110.65
+      },
+      {
+        "date": "2026-05-22",
+        "description": "Salary - Quarry Hill Media",
+        "amount": 5097.41,
+        "balance": 3986.76
+      },
+      {
+        "date": "2026-05-24",
+        "description": "Insurance premium - Shield Mutual",
+        "amount": -111.4,
+        "balance": 3875.36
+      },
+      {
+        "date": "2026-05-24",
+        "description": "Rent - Elm Court Property Mgmt",
+        "amount": -2091.96,
+        "balance": 1783.4
+      },
+      {
+        "date": "2026-05-26",
+        "description": "Card purchase - Petrol station",
+        "amount": -88.69,
+        "balance": 1694.71
+      },
+      {
+        "date": "2026-05-29",
+        "description": "Card purchase - Green Basket Grocers",
+        "amount": -59.12,
+        "balance": 1635.59
+      },
+      {
+        "date": "2026-05-30",
+        "description": "Refund - Online order",
+        "amount": 136.01,
+        "balance": 1771.6
+      }
+    ]
+  },
+  "meta": {
+    "source": "synthetic",
+    "verified": true,
+    "scanned": true,
+    "seed": 7,
+    "locale": "DE",
+    "layout": "b"
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "file": "docs/bank-12.pdf",
+  "document_type": "bank_statement",
+  "fields": {
+    "bank_name": "Kaveri Cooperative Bank",
+    "account_holder": "Lucas Iyer",
+    "account_number_last4": "4431",
+    "statement_period_start": "2026-09-01",
+    "statement_period_end": "2026-09-30",
+    "currency": "INR",
+    "opening_balance": 8842.86,
+    "closing_balance": 12894.63,
+    "total_credits": 6621.77,
+    "total_debits": 2570.0,
+    "transactions": [
+      {
+        "date": "2026-09-06",
+        "description": "ATM withdrawal",
+        "amount": -126.25,
+        "balance": 8716.61
+      },
+      {
+        "date": "2026-09-07",
+        "description": "Insurance premium - Shield Mutual",
+        "amount": -144.51,
+        "balance": 8572.1
+      },
+      {
+        "date": "2026-09-07",
+        "description": "Card purchase - Green Basket Grocers",
+        "amount": -139.77,
+        "balance": 8432.33
+      },
+      {
+        "date": "2026-09-08",
+        "description": "ATM withdrawal",
+        "amount": -179.7,
+        "balance": 8252.63
+      },
+      {
+        "date": "2026-09-11",
+        "description": "ATM withdrawal",
+        "amount": -129.64,
+        "balance": 8122.99
+      },
+      {
+        "date": "2026-09-13",
+        "description": "Gym membership",
+        "amount": -65.99,
+        "balance": 8057.0
+      },
+      {
+        "date": "2026-09-24",
+        "description": "Salary - Quarry Hill Media",
+        "amount": 3291.62,
+        "balance": 11348.62
+      },
+      {
+        "date": "2026-09-24",
+        "description": "Transfer from savings",
+        "amount": 1008.56,
+        "balance": 12357.18
+      },
+      {
+        "date": "2026-09-27",
+        "description": "Transfer from savings",
+        "amount": 1110.96,
+        "balance": 13468.14
+      },
+      {
+        "date": "2026-09-29",
+        "description": "Transfer from savings",
+        "amount": 1100.41,
+        "balance": 14568.55
+      },
+      {
+        "date": "2026-09-29",
+        "description": "Rent - Elm Court Property Mgmt",
+        "amount": -1784.14,
+        "balance": 12784.41
+      },
+      {
+        "date": "2026-09-30",
+        "description": "Refund - Online order",
+        "amount": 110.22,
+        "balance": 12894.63
+      }
+    ]
+  },
+  "meta": {
+    "source": "synthetic",
+    "verified": true,
+    "scanned": true,
+    "seed": 7,
+    "locale": "IN",
+    "layout": "b"
+  }
+}

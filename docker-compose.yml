@@ -1,0 +1,83 @@
+# Local / single-VM stack: API + folder watcher + Postgres + n8n.
+#   cp .env.example .env   # then fill in keys
+#   docker compose up -d --build
+#   make n8n-import         # load the workflows into n8n
+name: docflow
+
+x-docflow: &docflow
+  build: .
+  image: docflow:latest
+  restart: unless-stopped
+  env_file: .env
+  environment:
+    DOCFLOW_DATABASE_URL: postgresql+psycopg://docflow:${POSTGRES_PASSWORD:-docflow}@db:5432/docflow
+    DOCFLOW_DATA_DIR: /data
+    DOCFLOW_NOTIFY_WEBHOOK_URL: ${DOCFLOW_NOTIFY_WEBHOOK_URL:-http://n8n:5678/webhook/docflow-notify}
+  volumes:
+    - ./data:/data # drop files into ./data/inbox
+    - ./secrets:/run/secrets:ro # optional: google-service-account.json for Sheets
+
+services:
+  db:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: docflow
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-docflow}
+      POSTGRES_DB: docflow
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U docflow -d docflow"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    <<: *docflow
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  watcher:
+    <<: *docflow
+    command: ["docflow", "watch"]
+    healthcheck:
+      disable: true # the image's check is for the HTTP API
+    depends_on:
+      api:
+        condition: service_healthy # the API creates the tables on start-up
+
+  n8n:
+    # Pin a version for production, e.g. N8N_VERSION=1.123.0 in .env.
+    image: docker.n8n.io/n8nio/n8n:${N8N_VERSION:-latest}
+    restart: unless-stopped
+    ports:
+      - "5678:5678"
+    environment:
+      N8N_HOST: ${N8N_HOST:-localhost}
+      N8N_PORT: 5678
+      N8N_PROTOCOL: http
+      WEBHOOK_URL: ${N8N_WEBHOOK_URL:-http://localhost:5678/}
+      N8N_ENCRYPTION_KEY: ${N8N_ENCRYPTION_KEY:?set N8N_ENCRYPTION_KEY in .env}
+      N8N_SECURE_COOKIE: "false" # plain http locally; the prod overlay turns it on
+      N8N_BLOCK_ENV_ACCESS_IN_NODE: "false" # the workflows read the values below
+      GENERIC_TIMEZONE: ${GENERIC_TIMEZONE:-UTC}
+      TZ: ${GENERIC_TIMEZONE:-UTC}
+      DOCFLOW_API_URL: http://api:8000
+      DOCFLOW_API_KEY: ${DOCFLOW_API_KEY:-}
+      DOCFLOW_NOTIFY_SECRET: ${DOCFLOW_NOTIFY_SECRET:-}
+      SLACK_WEBHOOK_URL: ${SLACK_WEBHOOK_URL:-}
+      ALERT_EMAIL_TO: ${ALERT_EMAIL_TO:-}
+      ALERT_EMAIL_FROM: ${ALERT_EMAIL_FROM:-docflow@example.com}
+    volumes:
+      - n8n_data:/home/node/.n8n
+      - ./n8n/workflows:/workflows:ro
+    depends_on:
+      - api
+
+volumes:
+  pgdata:
+  n8n_data:

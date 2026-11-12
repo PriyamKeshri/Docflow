@@ -1,0 +1,140 @@
+{
+  "file": "docs/bank-01.pdf",
+  "document_type": "bank_statement",
+  "fields": {
+    "bank_name": "Northwind Savings Bank",
+    "account_holder": "Noah Becker",
+    "account_number_last4": "2646",
+    "statement_period_start": "2025-09-01",
+    "statement_period_end": "2025-09-30",
+    "currency": "USD",
+    "opening_balance": 9207.49,
+    "closing_balance": 13593.32,
+    "total_credits": 5432.83,
+    "total_debits": 1047.0,
+    "transactions": [
+      {
+        "date": "2025-09-01",
+        "description": "Card purchase - Petrol station",
+        "amount": -81.77,
+        "balance": 9125.72
+      },
+      {
+        "date": "2025-09-02",
+        "description": "Mobile phone - Skyline Telecom",
+        "amount": -74.69,
+        "balance": 9051.03
+      },
+      {
+        "date": "2025-09-03",
+        "description": "Card purchase - Petrol station",
+        "amount": -67.3,
+        "balance": 8983.73
+      },
+      {
+        "date": "2025-09-03",
+        "description": "Refund - Online order",
+        "amount": 44.8,
+        "balance": 9028.53
+      },
+      {
+        "date": "2025-09-03",
+        "description": "Transfer from savings",
+        "amount": 540.46,
+        "balance": 9568.99
+      },
+      {
+        "date": "2025-09-03",
+        "description": "Card purchase - Petrol station",
+        "amount": -67.72,
+        "balance": 9501.27
+      },
+      {
+        "date": "2025-09-06",
+        "description": "ATM withdrawal",
+        "amount": -101.19,
+        "balance": 9400.08
+      },
+      {
+        "date": "2025-09-09",
+        "description": "Electricity bill - City Power",
+        "amount": -81.52,
+        "balance": 9318.56
+      },
+      {
+        "date": "2025-09-09",
+        "description": "Card purchase - Petrol station",
+        "amount": -32.22,
+        "balance": 9286.34
+      },
+      {
+        "date": "2025-09-09",
+        "description": "Refund - Online order",
+        "amount": 83.88,
+        "balance": 9370.22
+      },
+      {
+        "date": "2025-09-11",
+        "description": "Card purchase - Corner Cafe",
+        "amount": -5.7,
+        "balance": 9364.52
+      },
+      {
+        "date": "2025-09-14",
+        "description": "Streaming subscription",
+        "amount": -14.57,
+        "balance": 9349.95
+      },
+      {
+        "date": "2025-09-20",
+        "description": "Salary - Larkspur Health",
+        "amount": 4656.08,
+        "balance": 14006.03
+      },
+      {
+        "date": "2025-09-21",
+        "description": "Insurance premium - Shield Mutual",
+        "amount": -115.4,
+        "balance": 13890.63
+      },
+      {
+        "date": "2025-09-23",
+        "description": "ATM withdrawal",
+        "amount": -115.96,
+        "balance": 13774.67
+      },
+      {
+        "date": "2025-09-26",
+        "description": "Electricity bill - City Power",
+        "amount": -99.63,
+        "balance": 13675.04
+      },
+      {
+        "date": "2025-09-26",
+        "description": "Card purchase - Green Basket Grocers",
+        "amount": -136.85,
+        "balance": 13538.19
+      },
+      {
+        "date": "2025-09-28",
+        "description": "Refund - Online order",
+        "amount": 107.61,
+        "balance": 13645.8
+      },
+      {
+        "date": "2025-09-29",
+        "description": "Electricity bill - City Power",
+        "amount": -52.48,
+        "balance": 13593.32
+      }
+    ]
+  },
+  "meta": {
+    "source": "synthetic",
+    "verified": true,
+    "scanned": false,
+    "seed": 7,
+    "locale": "US",
+    "layout": "a"
+  }
+}

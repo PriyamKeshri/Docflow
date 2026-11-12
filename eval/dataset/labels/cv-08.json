@@ -1,0 +1,58 @@
+{
+  "file": "docs/cv-08.pdf",
+  "document_type": "resume",
+  "fields": {
+    "full_name": "Felix Raman",
+    "email": "felix.raman@example.com",
+    "phone": "(555) 0143-9101",
+    "location": "Toronto, ON",
+    "skills": [
+      "Power BI",
+      "NetSuite",
+      "Excel",
+      "SAP",
+      "Accounts payable",
+      "IFRS",
+      "GAAP"
+    ],
+    "experience": [
+      {
+        "company": "Silverline Freight",
+        "title": "Accounts Payable Specialist",
+        "location": "Toronto, ON",
+        "start_date": "2025-01",
+        "end_date": "present"
+      },
+      {
+        "company": "Tidewater Engineering",
+        "title": "Senior Accountant",
+        "location": "Toronto, ON",
+        "start_date": "2021-07",
+        "end_date": "2024-11"
+      },
+      {
+        "company": "Fernbrook Labs",
+        "title": "Finance Manager",
+        "location": "Toronto, ON",
+        "start_date": "2019-01",
+        "end_date": "2021-04"
+      }
+    ],
+    "education": [
+      {
+        "institution": "Easton College of Commerce",
+        "degree": "MBA",
+        "field_of_study": "Finance",
+        "graduation_date": "2018"
+      }
+    ]
+  },
+  "meta": {
+    "source": "synthetic",
+    "verified": true,
+    "scanned": false,
+    "seed": 7,
+    "layout": "b",
+    "prompt_injection": true
+  }
+}

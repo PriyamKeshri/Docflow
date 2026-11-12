@@ -1,0 +1,134 @@
+{
+  "file": "docs/bank-05.pdf",
+  "document_type": "bank_statement",
+  "fields": {
+    "bank_name": "Northwind Savings Bank",
+    "account_holder": "Lucas Whitaker",
+    "account_number_last4": "8002",
+    "statement_period_start": "2025-10-01",
+    "statement_period_end": "2025-10-31",
+    "currency": "USD",
+    "opening_balance": 9617.28,
+    "closing_balance": 13107.95,
+    "total_credits": 4549.89,
+    "total_debits": 1059.22,
+    "transactions": [
+      {
+        "date": "2025-10-03",
+        "description": "Card purchase - Petrol station",
+        "amount": -43.41,
+        "balance": 9573.87
+      },
+      {
+        "date": "2025-10-04",
+        "description": "Card purchase - Green Basket Grocers",
+        "amount": -94.32,
+        "balance": 9479.55
+      },
+      {
+        "date": "2025-10-04",
+        "description": "Card purchase - Petrol station",
+        "amount": -87.54,
+        "balance": 9392.01
+      },
+      {
+        "date": "2025-10-05",
+        "description": "ATM withdrawal",
+        "amount": -153.09,
+        "balance": 9238.92
+      },
+      {
+        "date": "2025-10-09",
+        "description": "ATM withdrawal",
+        "amount": -28.2,
+        "balance": 9210.72
+      },
+      {
+        "date": "2025-10-10",
+        "description": "Card purchase - Petrol station",
+        "amount": -33.32,
+        "balance": 9177.4
+      },
+      {
+        "date": "2025-10-10",
+        "description": "Streaming subscription",
+        "amount": -8.81,
+        "balance": 9168.59
+      },
+      {
+        "date": "2025-10-14",
+        "description": "Streaming subscription",
+        "amount": -17.25,
+        "balance": 9151.34
+      },
+      {
+        "date": "2025-10-17",
+        "description": "Card purchase - Green Basket Grocers",
+        "amount": -116.81,
+        "balance": 9034.53
+      },
+      {
+        "date": "2025-10-17",
+        "description": "Mobile phone - Skyline Telecom",
+        "amount": -57.54,
+        "balance": 8976.99
+      },
+      {
+        "date": "2025-10-19",
+        "description": "Card purchase - Petrol station",
+        "amount": -74.35,
+        "balance": 8902.64
+      },
+      {
+        "date": "2025-10-21",
+        "description": "Salary - Fernbrook Labs",
+        "amount": 4516.59,
+        "balance": 13419.23
+      },
+      {
+        "date": "2025-10-21",
+        "description": "ATM withdrawal",
+        "amount": -107.28,
+        "balance": 13311.95
+      },
+      {
+        "date": "2025-10-23",
+        "description": "ATM withdrawal",
+        "amount": -150.23,
+        "balance": 13161.72
+      },
+      {
+        "date": "2025-10-23",
+        "description": "Card purchase - Petrol station",
+        "amount": -36.54,
+        "balance": 13125.18
+      },
+      {
+        "date": "2025-10-25",
+        "description": "Gym membership",
+        "amount": -33.43,
+        "balance": 13091.75
+      },
+      {
+        "date": "2025-10-31",
+        "description": "Streaming subscription",
+        "amount": -17.1,
+        "balance": 13074.65
+      },
+      {
+        "date": "2025-10-31",
+        "description": "Refund - Online order",
+        "amount": 33.3,
+        "balance": 13107.95
+      }
+    ]
+  },
+  "meta": {
+    "source": "synthetic",
+    "verified": true,
+    "scanned": false,
+    "seed": 7,
+    "locale": "US",
+    "layout": "a"
+  }
+}
